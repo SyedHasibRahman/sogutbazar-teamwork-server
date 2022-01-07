@@ -57,9 +57,13 @@ async function run() {
       res.json({ _id: id, deletedCount: result.deletedCount });
     });
 
-    /* ========================= Category Collection END ======================= */
+    /* ========================= 
+    Category Collection END 
+    ======================= */
 
-    /* ========================= User Collection START ======================= */
+    /* ========================= 
+    User Collection START 
+    ======================= */
 
     // GET - All users
     app.get("/users", async (req, res) => {
@@ -129,9 +133,13 @@ async function run() {
       res.json(users);
     });
 
-    /* ========================= User Collection END ======================= */
+    /* ========================= 
+    User Collection END 
+    ======================= */
 
-    /* ========================= Product Collection START ======================= */
+    /* ========================= 
+    Product Collection START
+     ======================= */
 
     // GET - Get all product of a specific category
     app.get("/products", async (req, res) => {
@@ -173,9 +181,13 @@ async function run() {
       res.json({ _id: id, deletedCount: result.deletedCount });
     });
 
-    /* ========================= Product Collection END ======================= */
+    /* ========================= 
+    Product Collection END 
+    ======================= */
 
-    /* ========================= Banner Collection START ======================= */
+    /* ========================= 
+    Banner Collection START 
+    ======================= */
 
     // GET - Get all banners
     app.get("/banners", async (req, res) => {
@@ -249,9 +261,13 @@ async function run() {
       console.log(result);
     });
 
-    /* ========================= Banner Collection END ======================= */
+    /* ========================= 
+    Banner Collection END 
+    ======================= */
 
-    /* ========================= Testimonial Collection START ======================= */
+    /* ========================= 
+    Testimonial Collection START 
+    ======================= */
     // GET - Get Testimonials
     app.get("/testimonials", async (req, res) => {
       const cursor = testimonialCollection.find({});
@@ -266,7 +282,9 @@ async function run() {
       res.send(result);
     });
 
-    /* ========================= Testimonial Collection END ======================= */
+    /* ========================= 
+    Testimonial Collection END 
+    ======================= */
   } finally {
     // await client.close();
   }
